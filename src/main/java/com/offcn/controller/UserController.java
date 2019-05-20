@@ -59,9 +59,6 @@ public class UserController {
     @GetMapping("search/{name}/{page}/{size}")
     @ResponseBody
     public Slice<User> search(@PathVariable("name") String name,@PathVariable("page") int page,@PathVariable("size") int size){
-        System.out.println(name+"11111");
-        System.out.println(page+"22222");
-        System.out.println(size+"33333");
         page-=1;
         return userService.searchUser(name,PageRequest.of(page, size));
     }
