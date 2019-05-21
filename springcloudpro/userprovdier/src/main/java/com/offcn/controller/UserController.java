@@ -49,7 +49,7 @@ public class UserController {
 
     //修改数据库一条数据
     @PutMapping("/")
-    public String updateUser(User user){
+    public String updateUser(@RequestBody User user){
         try {
             userService.updateInfo(user);
             return "success";

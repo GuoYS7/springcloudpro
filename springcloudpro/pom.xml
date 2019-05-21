@@ -4,6 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>eurekaserver01</module>
+        <module>userprovdier</module>
+        <module>userweb</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
