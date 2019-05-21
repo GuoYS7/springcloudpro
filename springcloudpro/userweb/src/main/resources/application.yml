@@ -1,0 +1,14 @@
+server:
+  port: 9001
+#  设置tnmeleaf 缓存关闭
+spring:
+  thymeleaf:
+    cache: true
+#    配置应用名称
+  application:
+    name: UserWeb
+
+eureka:
+  client:
+    service-url:
+      defaulrZone: http://127.0.0.1:8888/eureka
