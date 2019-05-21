@@ -3,7 +3,8 @@ server:
 #  设置tnmeleaf 缓存关闭
 spring:
   thymeleaf:
-    cache: true
+    cache: false
+
 #    配置应用名称
   application:
     name: UserWeb
@@ -11,4 +12,4 @@ spring:
 eureka:
   client:
     service-url:
-      defaulrZone: http://127.0.0.1:8888/eureka
+      defaultZone: http://127.0.0.1:8888/eureka

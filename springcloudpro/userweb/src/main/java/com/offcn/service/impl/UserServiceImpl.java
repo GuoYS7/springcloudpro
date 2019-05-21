@@ -1,5 +1,6 @@
 package com.offcn.service.impl;
 
+import com.netflix.discovery.converters.Auto;
 import com.offcn.entity.User;
 import com.offcn.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ public class UserServiceImpl implements UserService {
     private RestTemplate restTemplate;
 
     //Eureka 客户端
+    @Autowired
     private LoadBalancerClient loadBalancerClient;
 
 
@@ -49,7 +51,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findOne(Long id) {
-        return restTemplate.getForObject(getProviderService()+id,User.class);
+        return restTemplate.getForObject(getProviderService()+"/"+id,User.class);
     }
 
     @Override
@@ -59,6 +61,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void deleteInfo(Long id) {
-        restTemplate.delete(getProviderService()+id);
+        restTemplate.delete(getProviderService()+"/"+id);
     }
 }
