@@ -6,6 +6,7 @@
         <module>eurekaserver01</module>
         <module>userprovdier</module>
         <module>userweb</module>
+        <module>eurekaserver04</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

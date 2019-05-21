@@ -1,12 +1,13 @@
 server:
-  port: 8888
+  port: 10086
 
 spring:
   application:
-    name: EurekaServer01
+    name: EurekaServer
+
+#    register-with-eureka: false
+#    fetch-registry: false
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
-    ervice-url:
-      defaultZone: http://localhost:${server.port}/eureka
+    service-url:
+      defaultZone: http://127.0.0.1:10087/eureka
