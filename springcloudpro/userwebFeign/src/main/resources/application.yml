@@ -15,4 +15,19 @@ eureka:
       defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
 logging:
   level:
-    com.offcn: debug
+    com:
+      offcn: debug
+
+#  开启 因为feign 内部有hystrix 功能 只要开启就可以了（默认是关闭的）
+feign:
+  hystrix:
+    enabled: true
+
+#  设置hystrix 熔断的超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000

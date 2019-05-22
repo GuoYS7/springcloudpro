@@ -43,6 +43,12 @@
             <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
         </dependency>
 
+        <!--引入hystrix熔断器-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+
     </dependencies>
 
 

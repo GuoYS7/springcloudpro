@@ -2,12 +2,13 @@ package com.offcn.service;
 
 import com.offcn.config.FeignConfig;
 import com.offcn.entity.User;
+import com.offcn.service.impl.UserServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@FeignClient(value = "USERPROVIDER",configuration = FeignConfig.class)
+@FeignClient(value = "USERPROVIDER",configuration = FeignConfig.class,fallback = UserServiceImpl.class)
 public interface UserService {
 
     //向数据库增加信息

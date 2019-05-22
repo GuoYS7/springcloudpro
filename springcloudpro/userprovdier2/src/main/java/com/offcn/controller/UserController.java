@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.Random;
 
 //restFull 风格是想controller 用于完成提供者
 @RestController
@@ -18,7 +19,12 @@ public class UserController {
     //查询所有的数据 get
     @GetMapping("/")
     public Map<String,Object> findAll(){
-       return userService.findAll();
+        try {
+            Thread.sleep(new Random().nextInt(1500));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return userService.findAll();
     }
 
     //向数据库增加数据

@@ -19,6 +19,7 @@ public class UserController {
     //查询所有的数据 get
     @GetMapping("/")
     public Map<String,Object> findAll(){
+
        return userService.findAll();
     }
 
