@@ -1,0 +1,18 @@
+server:
+  port: 9003
+#  设置tnmeleaf 缓存关闭
+spring:
+  thymeleaf:
+    cache: false
+
+#    配置应用名称
+  application:
+    name: UserWebFeign
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
+logging:
+  level:
+    com.offcn: debug

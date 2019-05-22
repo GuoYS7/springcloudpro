@@ -9,6 +9,8 @@
         <module>eurekaserver04</module>
         <module>userprovdier2</module>
         <module>userwebRibbon</module>
+        <module>userwebFeign</module>
+
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
